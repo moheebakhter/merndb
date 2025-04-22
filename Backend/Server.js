@@ -3,10 +3,13 @@ let r = require("./Routing/Rout");
 let port = process.env.PORT || 3002;
 let db = require("./Connect");
 let user = require("./Collections/User")
+let cors =require("cors");
 require("dotenv").config()
 
 let application = express();
+//json
 
+application.use(cors());
 application.use(express.json())
 application.use("/web/",r);
 

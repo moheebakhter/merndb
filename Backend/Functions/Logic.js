@@ -16,7 +16,7 @@ let main_functions = {
             res.status(200).json({ msg: "User created successfully", data: create });
         
         }catch (error) {
-            res.status(501).json({ msg: error.message })
+           return res.status(501).json({ msg: error.message })
         }
     }
    
